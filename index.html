@@ -6,6 +6,45 @@
 	<title>test doc</title>
 </head>
 <body>
-	
+	<div>
+
+		<p style="color: red;">test</p>
+	</div>
+
+	<script>
+		// This is a test script
+		alert("This is a test script");
+
+		setTimeout(() => {
+
+			var element = document.querySelector("p");
+			element.textContent = "This is a modified paragraph";
+			element.style.color = "blue";
+
+			const colors = [
+				"red",
+				"green",
+				"blue",
+				"yellow",
+				"purple"
+			]
+
+
+			setInterval(() => {
+
+				const randomColor = colors[Math.floor(Math.random() * colors.length)];
+				element.style.color = randomColor;
+
+				
+			}, 10000);
+
+
+
+
+			alert("This is a delayed alert");
+		}, 2000);
+
+
+	</script>
 </body>
 </html>
